@@ -1,44 +1,27 @@
-hello 
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+</style>
 <body>
-  …
-  
-<canvas class=
-"background"
-></canvas>
-  
-<script src=
-"path/to/particles.min.js"
-></script>
+  <canvas class="background"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
 </body>
-
-
-
-html, body {
-  
-margin
-: 0;
-  
-padding
-: 0;
-}
-.background {
-  
-position
-:
- absolute
-;
-  
-display
-:
- block
-;
-  
-top
-: 0;
-  
-left
-: 0;
-  
-z-index
-: 0;
-}
+<script>
+  window.onload = function () {
+    var particles = Particles.init({
+    selector: '.background',
+  color: ['#DA0463', '#404B69', '#DBEDF3'],
+  connectParticles: true
+});
+  };
+</script>
